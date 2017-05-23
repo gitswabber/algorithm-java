@@ -1,0 +1,11 @@
+/target/
+/.settings/
+/.classpath
+/.project
+/.idea
+/deploy
+*.iml
+*.orig
+/bin/
+/.apt_generated/
+*.class
