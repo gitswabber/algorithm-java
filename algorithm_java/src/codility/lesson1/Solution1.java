@@ -1,6 +1,9 @@
 package codility.lesson1;
 
-public class Solution {
+/**
+ * https://codility.com/programmers/lessons/1-iterations/
+ */
+public class Solution1 {
     public int solution(int N) {
         return getMaximumZeroLength( getBinaryGapStr(N) );
     }
@@ -18,7 +21,7 @@ public class Solution {
     private int getMaximumZeroLength(String binaryGapStr) {
         int length=0, maximumZeroLength=0;
         boolean surrounded=true;
-        // the value of index 0 must be 1
+        // the value of last index must be 1
         for(int i=binaryGapStr.length()-2; i >= 0 ; i--) {
             int binaryNumber = binaryGapStr.charAt(i) - '0';
 
@@ -30,9 +33,9 @@ public class Solution {
             } else {
                 if( length >= maximumZeroLength && surrounded ) {
                     maximumZeroLength = length;
-                    length = 0;
                     surrounded = false;
                 }
+                length = 0;
             }
         }
         return maximumZeroLength;
