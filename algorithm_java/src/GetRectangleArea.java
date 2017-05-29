@@ -17,33 +17,30 @@
     -
     SOLVING :
     The condition what is overlapped rectangles
-    1. Sum of the widths of two rectangles > Range of the widths of two rectangls on the coordinate
-    2. Sum of the heights of two rectangles > Range of the widths of two rectangls on the coordinate
+    1. Sum of the widths of two rectangles > Range of the widths of two rectangles on the coordinate
+    2. Sum of the heights of two rectangles > Range of the widths of two rectangles on the coordinate
 
  */
 public class GetRectangleArea {
     public int solution(int K, int L, int M, int N, int P, int Q, int R, int S) {
-        // long 으로 담아야 하나?
-        int maxArea = 2147483647;
-
         int areaOfRectangle1 = (M-K) * (N-L);
         int areaOfRectangle2 = (R-P) * (S-Q);
         int areaOfOverlappedRectangle = 0;
 
         int sumOfWidths = (M-K) + (R-P);
-        int sumOfWidthsOnCoordinate = (M > R? M:R) - (K < P? K:P);
+        int sumOfWidthsOnCoordinate = Integer.max(M, R) - Integer.min(K, P);
 
         int sumOfHeights = (N-L) + (S-Q);
-        int sumOfHeightsOnCoordinate = (N > S? N:S) - (L < Q? L:Q);
+        int sumOfHeightsOnCoordinate = Integer.max(N, S) - Integer.min(L, Q);
 
-        if((sumOfWidths>sumOfWidthsOnCoordinate) && (sumOfHeights>sumOfHeightsOnCoordinate)) {
+        if((sumOfWidths > sumOfWidthsOnCoordinate) && (sumOfHeights > sumOfHeightsOnCoordinate)) {
             areaOfOverlappedRectangle = (sumOfWidths-sumOfWidthsOnCoordinate) * (sumOfHeights-sumOfHeightsOnCoordinate);
         }
 
-        int totalArea = (areaOfRectangle1 + areaOfRectangle2 - areaOfOverlappedRectangle);
-        if(totalArea > maxArea) {
+        long totalArea = (areaOfRectangle1 + areaOfRectangle2 - areaOfOverlappedRectangle);
+        if(totalArea > Integer.MAX_VALUE) {
             return -1;
         }
-        return totalArea;
+        return (int) totalArea;
     }
 }
