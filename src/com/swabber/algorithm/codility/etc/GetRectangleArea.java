@@ -1,3 +1,4 @@
+package com.swabber.algorithm.codility.etc;
 
 /*
     Solving get total area of two rectangles.

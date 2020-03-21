@@ -1,5 +1,6 @@
-package com.swabber.algorithm.test;
+package com.swabber.algorithm.self.practice.test;
 
+// todo
 /*
     Get the number of trees which can be cut down as the follow conditions.
     1. All the remaining trees should be sorted in ascending order.

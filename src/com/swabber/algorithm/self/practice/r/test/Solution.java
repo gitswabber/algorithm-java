@@ -1,4 +1,4 @@
-package codility;
+package com.swabber.algorithm.self.practice.r.test;
 
 public class Solution {
 

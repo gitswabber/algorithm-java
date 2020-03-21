@@ -1,4 +1,4 @@
-package codility.lesson1;
+package com.swabber.algorithm.codility.lesson1;
 
 /**
  * https://codility.com/programmers/lessons/1-iterations/

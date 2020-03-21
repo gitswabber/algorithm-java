@@ -1,8 +1,11 @@
+package com.swabber.algorithm.self.practice.r.test;
+
+import com.swabber.algorithm.codility.etc.GetRectangleArea;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main {
+public class Solution2 {
     public static void main(String[] args) {
 
 /*        int number = 12136;

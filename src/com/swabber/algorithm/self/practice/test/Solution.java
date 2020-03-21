@@ -1,4 +1,4 @@
-package com.swabber.algorithm.solution;
+package com.swabber.algorithm.self.practice.test;
 
 /*
     Find positive number which is not included and smallest in array.

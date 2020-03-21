@@ -1,4 +1,4 @@
-package com.swabber.algorithm.test;
+package com.swabber.algorithm.self.practice.test;
 
 /*
     Find season which has biggest gap of tempature using T array.

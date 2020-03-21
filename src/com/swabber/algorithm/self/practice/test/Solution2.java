@@ -1,4 +1,4 @@
-package com.swabber.algorithm.test;
+package com.swabber.algorithm.self.practice.test;
 
 /*
     Make string as much as the count of A and B.
